@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>akin ozer's blog</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog">
+    <meta name="author" content="Akin Ozer">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+            integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+            crossorigin="anonymous"></script>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="../assets/css/theme-1.css">
+
+
+</head>
+
+<body>
+<!-- CODE: XJGL6 -->
+<header class="header text-center">
+    <h1 class="blog-name pt-lg-4 mb-0"><a href="../index.html">Akin's Blog</a></h1>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navigation" class="collapse navbar-collapse flex-column">
+            <div class="profile-section pt-3 pt-lg-0">
+                <img class="profile-image mb-3 rounded-circle mx-auto" src="../assets/images/akin.png" alt="image">
+
+                <div class="bio mb-3">Hi, my name is Akin Ozer. I am DevOps Engineer(aiming to change into SRE) at
+                    Inveon. I am interested in Cloud Native space, always trying new tech.
+                </div><!--//bio-->
+                <ul class="social-list list-inline py-3 mx-auto">
+                    <li class="list-inline-item"><a href="https://twitter.com/ozer_akn" target="_blank"><i
+                            class="fab fa-twitter fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.linkedin.com/in/ak%C4%B1n-%C3%B6zer/"
+                                                    target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://github.com/akin-ozer" target="_blank"><i
+                            class="fab fa-github-alt fa-fw"></i></a></li>
+                    <li class="list-inline-item"><a href="https://stackoverflow.com/users/11919207/ak%c4%b1n-%c3%96zer"
+                                                    target="_blank"><i class="fab fa-stack-overflow fa-fw"></i></a></li>
+                </ul><!--//social-list-->
+                <hr>
+            </div><!--//profile-section-->
+
+            <ul class="navbar-nav flex-column text-left">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog-post.html"><i class="fas fa-bookmark fa-fw mr-2"></i>Blog Post</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about.html"><i class="fas fa-user fa-fw mr-2"></i>About Me</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<div class="main-wrapper">
+
+    <article class="blog-post px-3 py-5 p-md-5">
+        <div class="container">
+            <header class="blog-post-header">
+                <h2 class="title mb-2">SRE Challenge 1</h2>
+                <div class="meta mb-3"><span class="date">Published at 10.01.2020</span><span
+                        class="time">20 min read</span></div>
+            </header>
+
+            <div class="blog-post-body">
+                <figure class="blog-banner">
+                    <img class="img-fluid" src="../assets/images/blog/sre-1-1.jpg"
+                         alt="image">
+                </figure>
+                <p>Welcome to my series about SRE/DevOps challenges. These posts are <b>real-world based examples</b>
+                    about job
+                    challenges that happens in recruitment process. Posts aim <b>solving job challenges by examples</b>,
+                    these
+                    are mainly best practise based solutions and <b>easy to run</b>.</p>
+
+                <p>People loves code that just runs, even that involves running script. Try to aim have <b>less steps to
+                    run code</b> but don't hardcode secrets in repo. <b>Don't use files, environment variables, binaries
+                    in
+                    your computer</b>. People should download source code and should be able to run script, that script
+                    should care about dependencies and secrets.(maybe ask user for secrets and configuration in script
+                    as
+                    input or just create secret password file for vaults after download.)</p>
+                <br/>
+                <h3>Note From Author</h3>
+                <p>I am generally writing mid to high level posts. I am learning and want to share while dealing with
+                    less and less documentation about new tech. I'll try to write about things less people interest in
+                    writing but more people actually needs. You can check out other posts in this site, maybe you can
+                    find some interesting posts. Thanks for reading.</p>
+                <blockquote class="blockquote m-lg-5 py-3 pl-4 px-lg-5">
+                    <p class="mb-2">Success consists of going from failed SRE interview to failed SRE interview
+                        without loss of enthusiasm.</p>
+                    <footer class="blockquote-footer">Winston Churchill</footer>
+                </blockquote>
+                <h2 class="mt-5 mb-3">This post is about this challange</h2>
+                <ul class="mb-5">
+                    <li class="mb-2">
+                        <h3>Task 1</h3>
+                        <br/>
+                        <p>For a given password file with the content as following:</p>
+                        <script src="https://gist.github.com/akin-ozer/f8e2e3591d99abd2af0a6f51db7de7b1.js"></script>
+                        <p>Make a Python program that prints out the duplicate users with their IDs:</p>
+                        <pre style='color:#000000;background:#ffffff;'><span style='color:#797997; '>$</span> <span
+                                style='color:#800000; font-weight:bold; '>.</span><span style='color:#40015a; '>/dupids.py</span> <span
+                                style='color:#808030; '>[</span><span style='color:#0000e6; '>passwd_file</span><span
+                                style='color:#808030; '>]</span>
+<span style='color:#008c00; '>100</span><span style='color:#808030; '>:</span> user1, user3
+</pre>
+                        <p>Can you think of linux one-liner to display only the duplicated IDs?</p>
+                        <pre style='color:#000000;background:#ffffff;'><span style='color:#797997; '>$</span> <span
+                                style='color:#e34adc; '>&lt;</span>some <span style='color:#40015a; '>linux/unix</span> commands<span
+                                style='color:#e34adc; '>></span>
+<span style='color:#008c00; '>100</span>
+</pre>
+                    </li>
+                    <br/>
+                    <li class="mb-2">
+                        <h3>Task 2</h3>
+                        <br/>
+                        <p>Create an account on Google Cloud (<a href="https://cloud.google.com">https://cloud.google.com</a>).
+                            You will have access to all GCP
+                            products with $300 credit for free, which is valid for 12 months. There will be no
+                            autocharge
+                            after free trial ends, you will not be charged unless you manually upgrade to a paid
+                            account.
+                        </p>
+                        <p>Install Google Cloud SDK: <a href="https://cloud.google.com/sdk/docs/downloads-interactive">https://cloud.google.com/sdk/docs/downloads-interactive</a>
+                        </p>
+                        <p>Create a production-ready PostgreSQL server and</p>
+                        <ul class="mb-5">
+                            <li class="mb-2">
+                                <p>Set postgres user password to a8dX46JRHwgNVMq8
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p>Make sure that it can be reached externally from anywhere</p>
+                            </li>
+                        </ul>
+                        <p>Create a zonal Kubernetes cluster with 2 nodes and simplest CPU/memory configuration. You
+                            can use google web console interface.
+                        </p>
+                        <p>Create a very simple Python application which is supposed to have 2 endpoints: (You may
+                            use Flask for simplicity <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart">https://flask.palletsprojects.com/en/1.1.x/quickstart</a>)
+                        </p>
+                        <ul class="mb-5">
+                            <li class="mb-2">
+                                <p>/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Returns “HTTP 200”
+                                    with string “Welcome to my app”
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p>/status : Returns “HTTP 204” without any content.</p>
+                            </li>
+                        </ul>
+                        <p>You need to dockerize this application and deploy it to the kubernetes cluster you created
+                            earlier.
+                        </p>
+                        <p>Enable Google Container Registry to push your Docker image.
+                        </p>
+                        <p>You may deploy the application manually using gcloud commands or any other deployment
+                            tools (e.g. circleci, ansible, gitlab pipeline, bitbucket pipeline, …)</p>
+                        <p>An external address needs to be assigned to the application running on Kubernetes. Make
+                            sure below URLs work:</p>
+                        <ul class="mb-5">
+                            <li class="mb-2">
+                                <p> https://$IP_ADRESS/
+                                </p>
+                            </li>
+                            <li class="mb-2">
+                                <p> https://$IP_ADRESS/status
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+                <br/>
+                <h2>Closing Notes</h2>
+                <br/>
+                <p>In this post we showed that <b>we can code with python</b>. As you can see in explanation python <b>web
+                    app code is not that important</b>. We just need an app to demonstrate that we can <b>dockerize</b>
+                    things. After dockerizing we can use <b>Kubernetes</b>.
+
+                </p>
+                <p>We also show off our <b>bash scripting</b> skills. We showed we can <b>create a PostgreSQL DB with
+                    password on cloud</b>.</p>
+
+                <p>Thanks for reading, there are different posts about wide range of technologies in this site. I try to
+                    be
+                    beginner friendly but as I said in introduction, I want to write mid/high level guides/posts.</p>
+                <p><b>Have a nice day!</b></p>
+
+                <br/>
+                <h5 class="mb-3">Relevant xkcd</h5>
+
+                <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr"><a
+                        href="https://twitter.com/xkcdComic/status/1047505626396418049"></a></blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+                <nav class="blog-nav nav nav-justified my-5">
+                    <a class="nav-link-prev nav-item nav-link rounded-left" href="../blog_posts/containers.html">Previous<i
+                            class="arrow-prev fas fa-long-arrow-alt-left"></i></a>
+                    <a class="nav-link-next nav-item nav-link rounded-right" href="../blog-list.html">Next<i
+                            class="arrow-next fas fa-long-arrow-alt-right"></i></a>
+                </nav>
+
+
+                <div class="blog-comments-section">
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT
+                         *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR
+                         *  PLATFORM OR CMS.
+                         *
+                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT:
+                         *  https://disqus.com/admin/universalcode/#configuration-variables
+                         */
+                        /*
+                        var disqus_config = function () {
+                            // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.url = PAGE_URL;
+
+                            // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            this.page.identifier = PAGE_IDENTIFIER;
+                        };
+                        */
+
+                        (function () {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                            var d = document, s = d.createElement('script');
+
+                            // IMPORTANT: Replace 3wmthemes with your forum shortname!
+                            s.src = 'https://3wmthemes.disqus.com/embed.js';
+
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>
+                        Please enable JavaScript to view the
+                        <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                            comments powered by Disqus.
+                        </a>
+                    </noscript>
+                </div><!--//blog-comments-section-->
+
+            </div><!--//container-->
+    </article>
+
+    <section class="promo-section theme-bg-light py-5 text-center">
+        <div class="container">
+            <h2 class="title">Check out my Github account, there are many open source projects there. Download, try it
+                out maybe contribute back.</h2>
+            <figure class="promo-figure">
+                <a href="https://github.com/akin-ozer" target="_blank"><img class="img-fluid"
+                                                                            src="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/03/GitHub-brave-hed-796x418.jpg"
+                                                                            alt="image"></a>
+            </figure>
+        </div><!--//container-->
+    </section><!--//promo-section-->
+
+    <footer class="footer text-center py-2 theme-bg-dark">
+
+        <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
+        <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a
+                href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
+
+    </footer>
+
+</div><!--//main-wrapper-->
+
+
+<!-- Javascript -->
+<script src="../assets/plugins/jquery-3.3.1.min.js"></script>
+<script src="../assets/plugins/popper.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Page Specific JS -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<!-- Custom JS -->
+<script src="../assets/js/blog.js"></script>
+
+<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+<script src="../assets/js/demo/style-switcher.js"></script>
+
+
+</body>
+</html> 
+
